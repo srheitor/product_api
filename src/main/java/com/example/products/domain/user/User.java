@@ -24,7 +24,8 @@ public class User {
 
     private String password;
 
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 
     public User(RequestUserDTO requestUserDTO) {
         this.name = requestUserDTO.name();
